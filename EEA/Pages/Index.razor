@@ -1,0 +1,23 @@
+﻿@page "/"
+
+<PageTitle>Erweiterter Euklidischer Algorithmus Rechner (EEAR)</PageTitle>
+
+<input type="number" placeholder="x" @oninput="Changed" @bind-value="X" />
+<input type="number" placeholder="y" @oninput="Changed" @bind-value="Y" />
+
+<br />
+<br />
+
+<div>
+    @if (_basicRows is not null)
+    {
+        <pre>@string.Join('\n', _basicRows.Select(x => x.ToString()))</pre>
+    }
+</div>
+
+<div>
+    @if (_advancedRows is not null)
+    {
+        <pre>@string.Join('\n', _advancedRows.Select(x => x.ToString()))</pre>
+    }
+</div>
